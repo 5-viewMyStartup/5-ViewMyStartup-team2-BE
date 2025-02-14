@@ -15,18 +15,19 @@ import { Prisma } from "@prisma/client";
  *         name: page
  *         schema:
  *           type: integer
- *         description: 페이지 번호 (기본값: 1)
+ *           default: 1
+ *         description: "페이지 번호 (기본값: 1)"
  *       - in: query
  *         name: filter
  *         schema:
  *           type: string
  *           enum: [revenueDesc, revenueAsc, employeeDesc, employeeAsc]
- *         description: 정렬 기준 (매출액/직원수 기준 오름차순/내림차순)
+ *         description: "정렬 기준 (매출액/직원수 기준 오름차순/내림차순)"
  *       - in: query
  *         name: search
  *         schema:
  *           type: string
- *         description: 검색어 (회사명, 소개, 카테고리)
+ *         description: "검색어 (회사명, 소개, 카테고리)"
  *     responses:
  *       200:
  *         description: 성공
